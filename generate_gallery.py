@@ -35,6 +35,18 @@ def generate_markdown():
     """Generate markdown content with embedded image links."""
     markdown_lines = ["# Thư viện Dự án Kiến trúc\n"]
     markdown_lines.append("Bộ sưu tập các dự án kiến trúc được phân loại theo từng loại công trình.\n")
+    markdown_lines.append("\n---\n")
+    markdown_lines.append("\n### Hướng dẫn sử dụng\n")
+    markdown_lines.append("\n1. **Thêm hình ảnh**: Đặt hình ảnh vào các thư mục tương ứng:")
+    markdown_lines.append("\n   - `1. BIỆT THỰ/` - Dự án biệt thự")
+    markdown_lines.append("\n   - `2. NHÀ PHỐ/` - Dự án nhà phố")
+    markdown_lines.append("\n   - `3. Công Trình Công cộng/` - Các công trình công cộng\n")
+    markdown_lines.append("\n2. **Cập nhật thư viện**: Chạy lệnh sau để tự động tạo lại thư viện:")
+    markdown_lines.append("\n   ```bash")
+    markdown_lines.append("\n   python3 generate_gallery.py")
+    markdown_lines.append("\n   ```\n")
+    markdown_lines.append("\n3. **Lưu ý**: Chỉ hình ảnh trong 3 thư mục trên mới được hiển thị. Hình ảnh ngoài các thư mục này sẽ bị bỏ qua.\n")
+    markdown_lines.append("\n---\n")
     
     repo_root = Path(__file__).parent
     
