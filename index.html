@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchX - Bộ Sưu Tập Kiến Trúc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .category {
+            margin-bottom: 50px;
+        }
+        
+        .category h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .image-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-info {
+            padding: 15px;
+        }
+        
+        .image-name {
+            color: #333;
+            font-size: 0.9em;
+            word-break: break-all;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏛️ ArchX</h1>
+        <p class="subtitle">Bộ Sưu Tập Kiến Trúc Việt Nam</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Biệt thự</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Nhà Phố</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Công Trình Công Cộng</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">34</div>
+                <div class="stat-label">Tổng số ảnh</div>
+            </div>
+        </div>
+        
+        <!-- Biệt thự Category -->
+        <div class="category">
+            <h2>🏰 Biệt thự (Villas)</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <a href="Biệt thự/0777b59e06ec8ab2d3fd.jpg" target="_blank">
+                        <img src="0777b59e06ec8ab2d3fd.jpg" alt="Biệt thự 1">
+                        <div class="image-info">
+                            <div class="image-name">0777b59e06ec8ab2d3fd.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/08df6bcbd7b95be702a8.jpg" target="_blank">
+                        <img src="08df6bcbd7b95be702a8.jpg" alt="Biệt thự 2">
+                        <div class="image-info">
+                            <div class="image-name">08df6bcbd7b95be702a8.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/1225c120d95d55030c4c.jpg" target="_blank">
+                        <img src="1225c120d95d55030c4c.jpg" alt="Biệt thự 3">
+                        <div class="image-info">
+                            <div class="image-name">1225c120d95d55030c4c.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/12d8ea644b16c7489e07.jpg" target="_blank">
+                        <img src="12d8ea644b16c7489e07.jpg" alt="Biệt thự 4">
+                        <div class="image-info">
+                            <div class="image-name">12d8ea644b16c7489e07.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/152eb9530d21817fd830.jpg" target="_blank">
+                        <img src="152eb9530d21817fd830.jpg" alt="Biệt thự 5">
+                        <div class="image-info">
+                            <div class="image-name">152eb9530d21817fd830.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/1976427df50f7951201e.jpg" target="_blank">
+                        <img src="1976427df50f7951201e.jpg" alt="Biệt thự 6">
+                        <div class="image-info">
+                            <div class="image-name">1976427df50f7951201e.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/1d9cc2ac7fdef380aacf.jpg" target="_blank">
+                        <img src="1d9cc2ac7fdef380aacf.jpg" alt="Biệt thự 7">
+                        <div class="image-info">
+                            <div class="image-name">1d9cc2ac7fdef380aacf.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/2332b9b507c78b99d2d6.jpg" target="_blank">
+                        <img src="2332b9b507c78b99d2d6.jpg" alt="Biệt thự 8">
+                        <div class="image-info">
+                            <div class="image-name">2332b9b507c78b99d2d6.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/3a0c7d6ec81c44421d0d.jpg" target="_blank">
+                        <img src="3a0c7d6ec81c44421d0d.jpg" alt="Biệt thự 9">
+                        <div class="image-info">
+                            <div class="image-name">3a0c7d6ec81c44421d0d.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/3f82ecb946cbca9593da.jpg" target="_blank">
+                        <img src="3f82ecb946cbca9593da.jpg" alt="Biệt thự 10">
+                        <div class="image-info">
+                            <div class="image-name">3f82ecb946cbca9593da.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Biệt thự/483a43a5f7d77b8922c6.jpg" target="_blank">
+                        <img src="483a43a5f7d77b8922c6.jpg" alt="Biệt thự 11">
+                        <div class="image-info">
+                            <div class="image-name">483a43a5f7d77b8922c6.jpg</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nhà Phố Category -->
+        <div class="category">
+            <h2>🏘️ Nhà Phố (Townhouses)</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <a href="Nhà Phố/4ca4e53b5049dc178558.jpg" target="_blank">
+                        <img src="4ca4e53b5049dc178558.jpg" alt="Nhà Phố 1">
+                        <div class="image-info">
+                            <div class="image-name">4ca4e53b5049dc178558.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/4cd7ee305642da1c8353.jpg" target="_blank">
+                        <img src="4cd7ee305642da1c8353.jpg" alt="Nhà Phố 2">
+                        <div class="image-info">
+                            <div class="image-name">4cd7ee305642da1c8353.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/517c9af4e98965d73c98.jpg" target="_blank">
+                        <img src="517c9af4e98965d73c98.jpg" alt="Nhà Phố 3">
+                        <div class="image-info">
+                            <div class="image-name">517c9af4e98965d73c98.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/54df84af29dda583fccc.jpg" target="_blank">
+                        <img src="54df84af29dda583fccc.jpg" alt="Nhà Phố 4">
+                        <div class="image-info">
+                            <div class="image-name">54df84af29dda583fccc.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/54e6a94016329a6cc323.jpg" target="_blank">
+                        <img src="54e6a94016329a6cc323.jpg" alt="Nhà Phố 5">
+                        <div class="image-info">
+                            <div class="image-name">54e6a94016329a6cc323.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/585094a2e1df6d8134ce.jpg" target="_blank">
+                        <img src="585094a2e1df6d8134ce.jpg" alt="Nhà Phố 6">
+                        <div class="image-info">
+                            <div class="image-name">585094a2e1df6d8134ce.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/5cfa45a8e6da6a8433cb.jpg" target="_blank">
+                        <img src="5cfa45a8e6da6a8433cb.jpg" alt="Nhà Phố 7">
+                        <div class="image-info">
+                            <div class="image-name">5cfa45a8e6da6a8433cb.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/7688d06faf12234c7a03 (1).jpg" target="_blank">
+                        <img src="7688d06faf12234c7a03 (1).jpg" alt="Nhà Phố 8">
+                        <div class="image-info">
+                            <div class="image-name">7688d06faf12234c7a03 (1).jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/7688d06faf12234c7a03.jpg" target="_blank">
+                        <img src="7688d06faf12234c7a03.jpg" alt="Nhà Phố 9">
+                        <div class="image-info">
+                            <div class="image-name">7688d06faf12234c7a03.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/7d2c4a92efe063be3af1.jpg" target="_blank">
+                        <img src="7d2c4a92efe063be3af1.jpg" alt="Nhà Phố 10">
+                        <div class="image-info">
+                            <div class="image-name">7d2c4a92efe063be3af1.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/971178cecfbc43e21aad.jpg" target="_blank">
+                        <img src="971178cecfbc43e21aad.jpg" alt="Nhà Phố 11">
+                        <div class="image-info">
+                            <div class="image-name">971178cecfbc43e21aad.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Nhà Phố/98180f27b455380b6144.jpg" target="_blank">
+                        <img src="98180f27b455380b6144.jpg" alt="Nhà Phố 12">
+                        <div class="image-info">
+                            <div class="image-name">98180f27b455380b6144.jpg</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Công Trình Công Cộng Category -->
+        <div class="category">
+            <h2>🏢 Công Trình Công Cộng (Public Buildings)</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/9b1fa2681a1a9644cf0b.jpg" target="_blank">
+                        <img src="9b1fa2681a1a9644cf0b.jpg" alt="Công Trình Công Cộng 1">
+                        <div class="image-info">
+                            <div class="image-name">9b1fa2681a1a9644cf0b.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/9cbf90c822baaee4f7ab.jpg" target="_blank">
+                        <img src="9cbf90c822baaee4f7ab.jpg" alt="Công Trình Công Cộng 2">
+                        <div class="image-info">
+                            <div class="image-name">9cbf90c822baaee4f7ab.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/9f6f24198b6b07355e7a.jpg" target="_blank">
+                        <img src="9f6f24198b6b07355e7a.jpg" alt="Công Trình Công Cộng 3">
+                        <div class="image-info">
+                            <div class="image-name">9f6f24198b6b07355e7a.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/9f94759702ea8eb4d7fb.jpg" target="_blank">
+                        <img src="9f94759702ea8eb4d7fb.jpg" alt="Công Trình Công Cộng 4">
+                        <div class="image-info">
+                            <div class="image-name">9f94759702ea8eb4d7fb.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/a05915e293901fce4681.jpg" target="_blank">
+                        <img src="a05915e293901fce4681.jpg" alt="Công Trình Công Cộng 5">
+                        <div class="image-info">
+                            <div class="image-name">a05915e293901fce4681.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/a14aec384c4ac014995b.jpg" target="_blank">
+                        <img src="a14aec384c4ac014995b.jpg" alt="Công Trình Công Cộng 6">
+                        <div class="image-info">
+                            <div class="image-name">a14aec384c4ac014995b.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/a36cdd9275e0f9bea0f1.jpg" target="_blank">
+                        <img src="a36cdd9275e0f9bea0f1.jpg" alt="Công Trình Công Cộng 7">
+                        <div class="image-info">
+                            <div class="image-name">a36cdd9275e0f9bea0f1.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/b1908fb035c2b99ce0d3.jpg" target="_blank">
+                        <img src="b1908fb035c2b99ce0d3.jpg" alt="Công Trình Công Cộng 8">
+                        <div class="image-info">
+                            <div class="image-name">b1908fb035c2b99ce0d3.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/c8e0a3d70fa583fbdab4.jpg" target="_blank">
+                        <img src="c8e0a3d70fa583fbdab4.jpg" alt="Công Trình Công Cộng 9">
+                        <div class="image-info">
+                            <div class="image-name">c8e0a3d70fa583fbdab4.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/e3e513c474b9f8e7a1a8.jpg" target="_blank">
+                        <img src="e3e513c474b9f8e7a1a8.jpg" alt="Công Trình Công Cộng 10">
+                        <div class="image-info">
+                            <div class="image-name">e3e513c474b9f8e7a1a8.jpg</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="Công Trình Công Cộng/ee96199ba9e925b77cf8.jpg" target="_blank">
+                        <img src="ee96199ba9e925b77cf8.jpg" alt="Công Trình Công Cộng 11">
+                        <div class="image-info">
+                            <div class="image-name">ee96199ba9e925b77cf8.jpg</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
