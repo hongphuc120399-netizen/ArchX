@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchX - Embeddable Links Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .demo-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .demo-section h2 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        .code-block {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .demo-image {
+            max-width: 300px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            margin: 10px 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔗 ArchX Embeddable Links Demo</h1>
+    <p style="text-align: center; color: #666;">
+        This page demonstrates how to use the embeddable GitHub raw URLs in your applications.
+    </p>
+
+    <div class="demo-section">
+        <h2>✅ Example 1: HTML Image Tag</h2>
+        <p>You can use the URL directly in an HTML <code>&lt;img&gt;</code> tag:</p>
+        <div class="code-block">
+            <code>&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg" alt="Villa"&gt;</code>
+        </div>
+        <p><strong>Result:</strong></p>
+        <img class="demo-image" src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg" alt="Villa Example">
+    </div>
+
+    <div class="demo-section">
+        <h2>✅ Example 2: CSS Background</h2>
+        <p>Use in CSS for background images:</p>
+        <div class="code-block">
+            <code>background-image: url('https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1976427df50f7951201e.jpg');</code>
+        </div>
+        <div style="width: 100%; height: 200px; background-image: url('https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1976427df50f7951201e.jpg'); background-size: cover; background-position: center; border-radius: 4px;"></div>
+    </div>
+
+    <div class="demo-section">
+        <h2>✅ Example 3: JavaScript Fetch</h2>
+        <p>Load images programmatically with JavaScript:</p>
+        <div class="code-block">
+            <code>
+fetch('https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/3a0c7d6ec81c44421d0d.jpg')
+  .then(response => response.blob())
+  .then(blob => {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(blob);
+    document.body.appendChild(img);
+  });
+            </code>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>✅ Example 4: Grid of Multiple Images</h2>
+        <p>Load multiple categorized images at once:</p>
+        <div class="grid">
+            <img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg" alt="Villa 1">
+            <img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/4ca4e53b5049dc178558.jpg" alt="Townhouse 1">
+            <img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9b1fa2681a1a9644cf0b.jpg" alt="Public Building 1">
+            <img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1225c120d95d55030c4c.jpg" alt="Villa 2">
+            <img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/517c9af4e98965d73c98.jpg" alt="Townhouse 2">
+            <img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9cbf90c822baaee4f7ab.jpg" alt="Public Building 2">
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>📋 Framework Examples</h2>
+        
+        <h3>React</h3>
+        <div class="code-block">
+            <code>
+const imageUrl = 'https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg';
+&lt;img src={imageUrl} alt="Architecture" /&gt;
+            </code>
+        </div>
+
+        <h3>Flutter</h3>
+        <div class="code-block">
+            <code>
+Image.network(
+  'https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg'
+)
+            </code>
+        </div>
+
+        <h3>Android (Kotlin + Glide)</h3>
+        <div class="code-block">
+            <code>
+val url = "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg"
+Glide.with(context).load(url).into(imageView)
+            </code>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>📊 All Links Available</h2>
+        <p class="success">✓ 34 total images with embeddable URLs</p>
+        <ul>
+            <li><strong>Biệt thự (Villas):</strong> 11 images</li>
+            <li><strong>Nhà Phố (Townhouses):</strong> 12 images</li>
+            <li><strong>Công Trình Công Cộng (Public Buildings):</strong> 11 images</li>
+        </ul>
+        <p>See <a href="EMBEDDABLE-LINKS.md">EMBEDDABLE-LINKS.md</a> for the complete list of all URLs organized by category.</p>
+        <p>Or use <a href="image-links.json">image-links.json</a> to fetch the data programmatically.</p>
+    </div>
+
+</body>
+</html>
