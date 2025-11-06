@@ -1,0 +1,89 @@
+{
+  "category": "Biệt thự",
+  "category_english": "Villas",
+  "category_description": "Luxury villas and high-end residential architecture",
+  "total_images": 11,
+  "base_url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/",
+  "repository": "hongphuc120399-netizen/ArchX",
+  "last_updated": "2025-11-06",
+  "images": [
+    {
+      "id": 1,
+      "filename": "0777b59e06ec8ab2d3fd.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg",
+      "size_bytes": 370933
+    },
+    {
+      "id": 2,
+      "filename": "08df6bcbd7b95be702a8.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/08df6bcbd7b95be702a8.jpg",
+      "size_bytes": 267163
+    },
+    {
+      "id": 3,
+      "filename": "1225c120d95d55030c4c.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1225c120d95d55030c4c.jpg",
+      "size_bytes": 217800
+    },
+    {
+      "id": 4,
+      "filename": "12d8ea644b16c7489e07.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/12d8ea644b16c7489e07.jpg",
+      "size_bytes": 279160
+    },
+    {
+      "id": 5,
+      "filename": "152eb9530d21817fd830.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/152eb9530d21817fd830.jpg",
+      "size_bytes": 158234
+    },
+    {
+      "id": 6,
+      "filename": "1976427df50f7951201e.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1976427df50f7951201e.jpg",
+      "size_bytes": 598773
+    },
+    {
+      "id": 7,
+      "filename": "1d9cc2ac7fdef380aacf.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1d9cc2ac7fdef380aacf.jpg",
+      "size_bytes": 338249
+    },
+    {
+      "id": 8,
+      "filename": "2332b9b507c78b99d2d6.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/2332b9b507c78b99d2d6.jpg",
+      "size_bytes": 281078
+    },
+    {
+      "id": 9,
+      "filename": "3a0c7d6ec81c44421d0d.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/3a0c7d6ec81c44421d0d.jpg",
+      "size_bytes": 313390
+    },
+    {
+      "id": 10,
+      "filename": "3f82ecb946cbca9593da.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/3f82ecb946cbca9593da.jpg",
+      "size_bytes": 373565
+    },
+    {
+      "id": 11,
+      "filename": "483a43a5f7d77b8922c6.jpg",
+      "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/483a43a5f7d77b8922c6.jpg",
+      "size_bytes": 306136
+    }
+  ],
+  "metadata": {
+    "format": "JPG",
+    "hosted_on": "GitHub Raw",
+    "access": "Public",
+    "cors_enabled": true,
+    "authentication_required": false
+  },
+  "usage_notes": {
+    "rate_limiting": "GitHub has rate limits for raw file access. Consider caching for production use.",
+    "performance": "Images are high-resolution. Consider using thumbnails or responsive images.",
+    "reliability": "Hosted on GitHub's infrastructure with high availability."
+  }
+}
