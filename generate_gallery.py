@@ -4,8 +4,8 @@ Script to generate a markdown gallery from images in specific folders.
 Ignores images outside the specified folders.
 """
 
-import os
 from pathlib import Path
+from urllib.parse import quote
 
 # Define the folders to scan
 FOLDERS = [
@@ -33,20 +33,33 @@ def get_images_in_folder(folder_path):
 
 def generate_markdown():
     """Generate markdown content with embedded image links."""
-    markdown_lines = ["# Thư viện Dự án Kiến trúc\n"]
-    markdown_lines.append("Bộ sưu tập các dự án kiến trúc được phân loại theo từng loại công trình.\n")
-    markdown_lines.append("\n---\n")
-    markdown_lines.append("\n### Hướng dẫn sử dụng\n")
-    markdown_lines.append("\n1. **Thêm hình ảnh**: Đặt hình ảnh vào các thư mục tương ứng:")
-    markdown_lines.append("\n   - `1. BIỆT THỰ/` - Dự án biệt thự")
-    markdown_lines.append("\n   - `2. NHÀ PHỐ/` - Dự án nhà phố")
-    markdown_lines.append("\n   - `3. Công Trình Công cộng/` - Các công trình công cộng\n")
-    markdown_lines.append("\n2. **Cập nhật thư viện**: Chạy lệnh sau để tự động tạo lại thư viện:")
-    markdown_lines.append("\n   ```bash")
-    markdown_lines.append("\n   python3 generate_gallery.py")
-    markdown_lines.append("\n   ```\n")
-    markdown_lines.append("\n3. **Lưu ý**: Chỉ hình ảnh trong 3 thư mục trên mới được hiển thị. Hình ảnh ngoài các thư mục này sẽ bị bỏ qua.\n")
-    markdown_lines.append("\n---\n")
+    lines = []
+    
+    # Header
+    lines.append("# Thư viện Dự án Kiến trúc")
+    lines.append("")
+    lines.append("Bộ sưu tập các dự án kiến trúc được phân loại theo từng loại công trình.")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    
+    # Instructions
+    lines.append("### Hướng dẫn sử dụng")
+    lines.append("")
+    lines.append("1. **Thêm hình ảnh**: Đặt hình ảnh vào các thư mục tương ứng:")
+    lines.append("   - `1. BIỆT THỰ/` - Dự án biệt thự")
+    lines.append("   - `2. NHÀ PHỐ/` - Dự án nhà phố")
+    lines.append("   - `3. Công Trình Công cộng/` - Các công trình công cộng")
+    lines.append("")
+    lines.append("2. **Cập nhật thư viện**: Chạy lệnh sau để tự động tạo lại thư viện:")
+    lines.append("   ```bash")
+    lines.append("   python3 generate_gallery.py")
+    lines.append("   ```")
+    lines.append("")
+    lines.append("3. **Lưu ý**: Chỉ hình ảnh trong 3 thư mục trên mới được hiển thị. Hình ảnh ngoài các thư mục này sẽ bị bỏ qua.")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
     
     repo_root = Path(__file__).parent
     
@@ -54,25 +67,26 @@ def generate_markdown():
         folder_path = repo_root / folder_name
         images = get_images_in_folder(folder_path)
         
+        # Add folder heading
+        lines.append(f"## {folder_name}")
+        lines.append("")
+        
         if images:
-            # Add folder heading
-            markdown_lines.append(f"\n## {folder_name}\n")
-            
             # Add each image as an embedded link
             for image in images:
                 # Use relative path from repo root
                 relative_path = image.relative_to(repo_root)
-                # URL encode the path for markdown
-                image_url = str(relative_path).replace(" ", "%20")
+                # Properly URL encode the path for markdown
+                image_url = quote(str(relative_path))
                 image_name = image.stem.replace("_", " ").replace("-", " ")
                 
-                markdown_lines.append(f"![{image_name}]({image_url})\n")
+                lines.append(f"![{image_name}]({image_url})")
+                lines.append("")
         else:
-            # Add folder heading even if empty
-            markdown_lines.append(f"\n## {folder_name}\n")
-            markdown_lines.append("*Chưa có hình ảnh*\n")
+            lines.append("*Chưa có hình ảnh*")
+            lines.append("")
     
-    return "\n".join(markdown_lines)
+    return "\n".join(lines)
 
 def main():
     """Main function to generate README.md."""
