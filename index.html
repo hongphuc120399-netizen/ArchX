@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà Phố - ArchX Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #f5f5f5;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .image-caption {
+            padding: 15px;
+            background: white;
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+        }
+        
+        .embed-code {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8em;
+            word-break: break-all;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            display: none;
+        }
+        
+        .show-embed-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85em;
+            margin-top: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .show-embed-btn:hover {
+            background: #5568d3;
+        }
+        
+        .stats {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .stats span {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 Nhà Phố - ArchX</h1>
+        <p class="subtitle">Vietnamese Townhouse Architecture Gallery</p>
+        
+        <div class="stats">
+            Total Townhouse Images: <span>34</span>
+        </div>
+        
+        <div class="gallery">
+            <!-- Image 1 -->
+            <div class="gallery-item">
+                <img src="0777b59e06ec8ab2d3fd.jpg" alt="Multi-story ornate townhouse with classical Vietnamese architectural details" loading="lazy">
+                <div class="image-caption">
+                    <strong>Classical Ornate Townhouse</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="gallery-item">
+                <img src="08df6bcbd7b95be702a8.jpg" alt="Modern contemporary townhouse with multiple floors and balconies" loading="lazy">
+                <div class="image-caption">
+                    <strong>Modern Contemporary Townhouse</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/08df6bcbd7b95be702a8.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="gallery-item">
+                <img src="1225c120d95d55030c4c.jpg" alt="Row of white classical-style townhouses with ornate details" loading="lazy">
+                <div class="image-caption">
+                    <strong>Classical Row Townhouses</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1225c120d95d55030c4c.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 4 -->
+            <div class="gallery-item">
+                <img src="12d8ea644b16c7489e07.jpg" alt="Modern townhouse with contemporary facade" loading="lazy">
+                <div class="image-caption">
+                    <strong>Contemporary Facade</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/12d8ea644b16c7489e07.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 5 -->
+            <div class="gallery-item">
+                <img src="152eb9530d21817fd830.jpg" alt="Row townhouse development with French colonial influence" loading="lazy">
+                <div class="image-caption">
+                    <strong>French Colonial Style</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/152eb9530d21817fd830.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 6 -->
+            <div class="gallery-item">
+                <img src="1976427df50f7951201e.jpg" alt="Row of white and cream townhouses in development" loading="lazy">
+                <div class="image-caption">
+                    <strong>White & Cream Development</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1976427df50f7951201e.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 7 -->
+            <div class="gallery-item">
+                <img src="1d9cc2ac7fdef380aacf.jpg" alt="Townhouse unit in residential development" loading="lazy">
+                <div class="image-caption">
+                    <strong>Residential Development Unit</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1d9cc2ac7fdef380aacf.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 8 -->
+            <div class="gallery-item">
+                <img src="2332b9b507c78b99d2d6.jpg" alt="Modern townhouse with geometric design" loading="lazy">
+                <div class="image-caption">
+                    <strong>Geometric Design</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/2332b9b507c78b99d2d6.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 9 -->
+            <div class="gallery-item">
+                <img src="3a0c7d6ec81c44421d0d.jpg" alt="Contemporary townhouse architecture" loading="lazy">
+                <div class="image-caption">
+                    <strong>Contemporary Architecture</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/3a0c7d6ec81c44421d0d.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 10 -->
+            <div class="gallery-item">
+                <img src="3f82ecb946cbca9593da.jpg" alt="Townhouse with modern styling" loading="lazy">
+                <div class="image-caption">
+                    <strong>Modern Styling</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/3f82ecb946cbca9593da.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 11 -->
+            <div class="gallery-item">
+                <img src="483a43a5f7d77b8922c6.jpg" alt="Multi-story townhouse residence" loading="lazy">
+                <div class="image-caption">
+                    <strong>Multi-Story Residence</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/483a43a5f7d77b8922c6.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 12 -->
+            <div class="gallery-item">
+                <img src="4ca4e53b5049dc178558.jpg" alt="Townhouse development unit" loading="lazy">
+                <div class="image-caption">
+                    <strong>Development Unit</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/4ca4e53b5049dc178558.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 13 -->
+            <div class="gallery-item">
+                <img src="4cd7ee305642da1c8353.jpg" alt="Contemporary townhouse design" loading="lazy">
+                <div class="image-caption">
+                    <strong>Contemporary Design</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/4cd7ee305642da1c8353.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 14 -->
+            <div class="gallery-item">
+                <img src="517c9af4e98965d73c98.jpg" alt="Modern townhouse with balconies" loading="lazy">
+                <div class="image-caption">
+                    <strong>Modern with Balconies</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/517c9af4e98965d73c98.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 15 -->
+            <div class="gallery-item">
+                <img src="54df84af29dda583fccc.jpg" alt="Row townhouse architecture" loading="lazy">
+                <div class="image-caption">
+                    <strong>Row Architecture</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/54df84af29dda583fccc.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 16 -->
+            <div class="gallery-item">
+                <img src="54e6a94016329a6cc323.jpg" alt="Townhouse with contemporary features" loading="lazy">
+                <div class="image-caption">
+                    <strong>Contemporary Features</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/54e6a94016329a6cc323.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 17 -->
+            <div class="gallery-item">
+                <img src="585094a2e1df6d8134ce.jpg" alt="Multi-floor townhouse design" loading="lazy">
+                <div class="image-caption">
+                    <strong>Multi-Floor Design</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/585094a2e1df6d8134ce.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 18 -->
+            <div class="gallery-item">
+                <img src="5cfa45a8e6da6a8433cb.jpg" alt="Townhouse in residential area" loading="lazy">
+                <div class="image-caption">
+                    <strong>Residential Area</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/5cfa45a8e6da6a8433cb.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 19 -->
+            <div class="gallery-item">
+                <img src="7688d06faf12234c7a03 (1).jpg" alt="Townhouse architectural view" loading="lazy">
+                <div class="image-caption">
+                    <strong>Architectural View (Alt)</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/7688d06faf12234c7a03%20(1).jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 20 -->
+            <div class="gallery-item">
+                <img src="7688d06faf12234c7a03.jpg" alt="Townhouse architectural view" loading="lazy">
+                <div class="image-caption">
+                    <strong>Architectural View</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/7688d06faf12234c7a03.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 21 -->
+            <div class="gallery-item">
+                <img src="7d2c4a92efe063be3af1.jpg" alt="Modern townhouse structure" loading="lazy">
+                <div class="image-caption">
+                    <strong>Modern Structure</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/7d2c4a92efe063be3af1.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 22 -->
+            <div class="gallery-item">
+                <img src="971178cecfbc43e21aad.jpg" alt="Townhouse development unit" loading="lazy">
+                <div class="image-caption">
+                    <strong>Development Unit</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/971178cecfbc43e21aad.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 23 -->
+            <div class="gallery-item">
+                <img src="98180f27b455380b6144.jpg" alt="Contemporary townhouse design" loading="lazy">
+                <div class="image-caption">
+                    <strong>Contemporary Design</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/98180f27b455380b6144.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 24 -->
+            <div class="gallery-item">
+                <img src="9b1fa2681a1a9644cf0b.jpg" alt="Townhouse with modern amenities" loading="lazy">
+                <div class="image-caption">
+                    <strong>Modern Amenities</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9b1fa2681a1a9644cf0b.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 25 -->
+            <div class="gallery-item">
+                <img src="9cbf90c822baaee4f7ab.jpg" alt="Row townhouse architecture" loading="lazy">
+                <div class="image-caption">
+                    <strong>Row Architecture</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9cbf90c822baaee4f7ab.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 26 -->
+            <div class="gallery-item">
+                <img src="9f6f24198b6b07355e7a.jpg" alt="Townhouse residential unit" loading="lazy">
+                <div class="image-caption">
+                    <strong>Residential Unit</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9f6f24198b6b07355e7a.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 27 -->
+            <div class="gallery-item">
+                <img src="9f94759702ea8eb4d7fb.jpg" alt="Modern townhouse facade" loading="lazy">
+                <div class="image-caption">
+                    <strong>Modern Facade</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9f94759702ea8eb4d7fb.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 28 -->
+            <div class="gallery-item">
+                <img src="a05915e293901fce4681.jpg" alt="Townhouse development" loading="lazy">
+                <div class="image-caption">
+                    <strong>Townhouse Development</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/a05915e293901fce4681.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 29 -->
+            <div class="gallery-item">
+                <img src="a14aec384c4ac014995b.jpg" alt="Contemporary townhouse style" loading="lazy">
+                <div class="image-caption">
+                    <strong>Contemporary Style</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/a14aec384c4ac014995b.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 30 -->
+            <div class="gallery-item">
+                <img src="a36cdd9275e0f9bea0f1.jpg" alt="Townhouse architecture" loading="lazy">
+                <div class="image-caption">
+                    <strong>Townhouse Architecture</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/a36cdd9275e0f9bea0f1.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 31 -->
+            <div class="gallery-item">
+                <img src="b1908fb035c2b99ce0d3.jpg" alt="Row townhouse unit" loading="lazy">
+                <div class="image-caption">
+                    <strong>Row Townhouse Unit</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/b1908fb035c2b99ce0d3.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 32 -->
+            <div class="gallery-item">
+                <img src="c8e0a3d70fa583fbdab4.jpg" alt="Modern townhouse design" loading="lazy">
+                <div class="image-caption">
+                    <strong>Modern Design</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/c8e0a3d70fa583fbdab4.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 33 -->
+            <div class="gallery-item">
+                <img src="e3e513c474b9f8e7a1a8.jpg" alt="Townhouse residential structure" loading="lazy">
+                <div class="image-caption">
+                    <strong>Residential Structure</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/e3e513c474b9f8e7a1a8.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+            
+            <!-- Image 34 -->
+            <div class="gallery-item">
+                <img src="ee96199ba9e925b77cf8.jpg" alt="Townhouse development unit" loading="lazy">
+                <div class="image-caption">
+                    <strong>Development Unit</strong>
+                    <button class="show-embed-btn" onclick="toggleEmbed(this)">Show Embed Code</button>
+                    <div class="embed-code">&lt;img src="https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/ee96199ba9e925b77cf8.jpg" alt="Townhouse"&gt;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleEmbed(button) {
+            const embedCode = button.nextElementSibling;
+            if (embedCode.style.display === 'none' || embedCode.style.display === '') {
+                embedCode.style.display = 'block';
+                button.textContent = 'Hide Embed Code';
+            } else {
+                embedCode.style.display = 'none';
+                button.textContent = 'Show Embed Code';
+            }
+        }
+    </script>
+</body>
+</html>
