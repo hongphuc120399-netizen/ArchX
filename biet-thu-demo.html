@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biệt Thự Gallery - ArchX</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            transform: translateY(0);
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .item-details {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: #667eea;
+        }
+
+        .info-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .info-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .info-section p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .copy-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: background 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: #764ba2;
+        }
+
+        .url-display {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.85em;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏰 Biệt Thự</h1>
+        <p class="subtitle">Luxury Villa Architecture Collection</p>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Total Images</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Embeddable</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Free</div>
+                <div class="stat-label">To Use</div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>📋 About This Gallery</h2>
+            <p>
+                This gallery demonstrates embeddable image links for all Biệt Thự (Villa) images from the ArchX collection. 
+                All images are hosted on GitHub and can be embedded directly into your applications using the raw GitHub URLs.
+                Click on any image to view it in full size, or use the copy button to get the embeddable URL.
+            </p>
+        </div>
+
+        <div class="info-section">
+            <h2>🔗 Example Embeddable URL</h2>
+            <div class="url-display">
+                https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg
+            </div>
+            <p>
+                <strong>Usage:</strong> You can use these URLs in HTML img tags, CSS background-image, 
+                JavaScript fetch/axios, React components, Flutter Image.network(), iOS URLSession, 
+                Android Glide/Picasso, and any other HTTP image loader.
+            </p>
+        </div>
+
+        <div id="gallery" class="gallery">
+            <div class="loading">Loading gallery</div>
+        </div>
+    </div>
+
+    <!-- Modal for full-size image view -->
+    <div id="modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content" alt="Full size villa">
+    </div>
+
+    <script>
+        // Villa images data
+        const villaImages = [
+            { id: 1, filename: '0777b59e06ec8ab2d3fd.jpg', size_bytes: 370933 },
+            { id: 2, filename: '08df6bcbd7b95be702a8.jpg', size_bytes: 267163 },
+            { id: 3, filename: '1225c120d95d55030c4c.jpg', size_bytes: 217800 },
+            { id: 4, filename: '12d8ea644b16c7489e07.jpg', size_bytes: 279160 },
+            { id: 5, filename: '152eb9530d21817fd830.jpg', size_bytes: 158234 },
+            { id: 6, filename: '1976427df50f7951201e.jpg', size_bytes: 598773 },
+            { id: 7, filename: '1d9cc2ac7fdef380aacf.jpg', size_bytes: 338249 },
+            { id: 8, filename: '2332b9b507c78b99d2d6.jpg', size_bytes: 281078 },
+            { id: 9, filename: '3a0c7d6ec81c44421d0d.jpg', size_bytes: 313390 },
+            { id: 10, filename: '3f82ecb946cbca9593da.jpg', size_bytes: 373565 },
+            { id: 11, filename: '483a43a5f7d77b8922c6.jpg', size_bytes: 306136 }
+        ];
+
+        const baseUrl = 'https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/';
+
+        // Function to format bytes
+        function formatBytes(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+        }
+
+        // Function to create gallery items
+        function createGallery() {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+
+            villaImages.forEach(image => {
+                const imageUrl = baseUrl + image.filename;
+                
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.onclick = () => openModal(imageUrl);
+
+                const img = document.createElement('img');
+                img.src = imageUrl;
+                img.alt = `Villa ${image.id}`;
+                img.loading = 'lazy';
+
+                const overlay = document.createElement('div');
+                overlay.className = 'gallery-item-overlay';
+                overlay.innerHTML = `
+                    <div class="item-title">Villa #${image.id}</div>
+                    <div class="item-details">
+                        Size: ${formatBytes(image.size_bytes)}<br>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyUrl('${imageUrl}')">
+                            Copy URL
+                        </button>
+                    </div>
+                `;
+
+                item.appendChild(img);
+                item.appendChild(overlay);
+                gallery.appendChild(item);
+            });
+        }
+
+        // Function to open modal
+        function openModal(imageUrl) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImg.src = imageUrl;
+        }
+
+        // Function to close modal
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+        }
+
+        // Function to copy URL to clipboard
+        function copyUrl(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                alert('URL copied to clipboard:\n' + url);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('modal').onclick = function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        };
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Initialize gallery when page loads
+        window.onload = createGallery;
+    </script>
+</body>
+</html>
