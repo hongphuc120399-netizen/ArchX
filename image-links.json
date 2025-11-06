@@ -1,0 +1,170 @@
+{
+  "repository": "hongphuc120399-netizen/ArchX",
+  "base_url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main",
+  "categories": {
+    "biet_thu": {
+      "name": "Biệt thự",
+      "name_en": "Villas",
+      "count": 11,
+      "images": [
+        {
+          "filename": "0777b59e06ec8ab2d3fd.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg"
+        },
+        {
+          "filename": "08df6bcbd7b95be702a8.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/08df6bcbd7b95be702a8.jpg"
+        },
+        {
+          "filename": "1225c120d95d55030c4c.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1225c120d95d55030c4c.jpg"
+        },
+        {
+          "filename": "12d8ea644b16c7489e07.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/12d8ea644b16c7489e07.jpg"
+        },
+        {
+          "filename": "152eb9530d21817fd830.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/152eb9530d21817fd830.jpg"
+        },
+        {
+          "filename": "1976427df50f7951201e.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1976427df50f7951201e.jpg"
+        },
+        {
+          "filename": "1d9cc2ac7fdef380aacf.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/1d9cc2ac7fdef380aacf.jpg"
+        },
+        {
+          "filename": "2332b9b507c78b99d2d6.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/2332b9b507c78b99d2d6.jpg"
+        },
+        {
+          "filename": "3a0c7d6ec81c44421d0d.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/3a0c7d6ec81c44421d0d.jpg"
+        },
+        {
+          "filename": "3f82ecb946cbca9593da.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/3f82ecb946cbca9593da.jpg"
+        },
+        {
+          "filename": "483a43a5f7d77b8922c6.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/483a43a5f7d77b8922c6.jpg"
+        }
+      ]
+    },
+    "nha_pho": {
+      "name": "Nhà Phố",
+      "name_en": "Townhouses",
+      "count": 12,
+      "images": [
+        {
+          "filename": "4ca4e53b5049dc178558.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/4ca4e53b5049dc178558.jpg"
+        },
+        {
+          "filename": "4cd7ee305642da1c8353.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/4cd7ee305642da1c8353.jpg"
+        },
+        {
+          "filename": "517c9af4e98965d73c98.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/517c9af4e98965d73c98.jpg"
+        },
+        {
+          "filename": "54df84af29dda583fccc.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/54df84af29dda583fccc.jpg"
+        },
+        {
+          "filename": "54e6a94016329a6cc323.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/54e6a94016329a6cc323.jpg"
+        },
+        {
+          "filename": "585094a2e1df6d8134ce.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/585094a2e1df6d8134ce.jpg"
+        },
+        {
+          "filename": "5cfa45a8e6da6a8433cb.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/5cfa45a8e6da6a8433cb.jpg"
+        },
+        {
+          "filename": "7688d06faf12234c7a03 (1).jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/7688d06faf12234c7a03%20(1).jpg"
+        },
+        {
+          "filename": "7688d06faf12234c7a03.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/7688d06faf12234c7a03.jpg"
+        },
+        {
+          "filename": "7d2c4a92efe063be3af1.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/7d2c4a92efe063be3af1.jpg"
+        },
+        {
+          "filename": "971178cecfbc43e21aad.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/971178cecfbc43e21aad.jpg"
+        },
+        {
+          "filename": "98180f27b455380b6144.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/98180f27b455380b6144.jpg"
+        }
+      ]
+    },
+    "cong_trinh_cong_cong": {
+      "name": "Công Trình Công Cộng",
+      "name_en": "Public Buildings",
+      "count": 11,
+      "images": [
+        {
+          "filename": "9b1fa2681a1a9644cf0b.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9b1fa2681a1a9644cf0b.jpg"
+        },
+        {
+          "filename": "9cbf90c822baaee4f7ab.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9cbf90c822baaee4f7ab.jpg"
+        },
+        {
+          "filename": "9f6f24198b6b07355e7a.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9f6f24198b6b07355e7a.jpg"
+        },
+        {
+          "filename": "9f94759702ea8eb4d7fb.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/9f94759702ea8eb4d7fb.jpg"
+        },
+        {
+          "filename": "a05915e293901fce4681.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/a05915e293901fce4681.jpg"
+        },
+        {
+          "filename": "a14aec384c4ac014995b.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/a14aec384c4ac014995b.jpg"
+        },
+        {
+          "filename": "a36cdd9275e0f9bea0f1.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/a36cdd9275e0f9bea0f1.jpg"
+        },
+        {
+          "filename": "b1908fb035c2b99ce0d3.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/b1908fb035c2b99ce0d3.jpg"
+        },
+        {
+          "filename": "c8e0a3d70fa583fbdab4.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/c8e0a3d70fa583fbdab4.jpg"
+        },
+        {
+          "filename": "e3e513c474b9f8e7a1a8.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/e3e513c474b9f8e7a1a8.jpg"
+        },
+        {
+          "filename": "ee96199ba9e925b77cf8.jpg",
+          "url": "https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/ee96199ba9e925b77cf8.jpg"
+        }
+      ]
+    }
+  },
+  "total_images": 34,
+  "usage_examples": {
+    "html_img_tag": "<img src=\"https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg\" alt=\"Villa\">",
+    "markdown": "![Villa](https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg)",
+    "css_background": "background-image: url('https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg');",
+    "javascript_fetch": "fetch('https://raw.githubusercontent.com/hongphuc120399-netizen/ArchX/main/0777b59e06ec8ab2d3fd.jpg')"
+  }
+}

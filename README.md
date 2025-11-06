@@ -56,6 +56,21 @@ Thư mục: `Công Trình Công Cộng/`
 
 Mở file [index.html](index.html) trong trình duyệt để xem bộ sưu tập với giao diện đẹp mắt.
 
+## 🔗 Embeddable Links (Liên kết nhúng vào ứng dụng)
+
+**Để sử dụng ảnh trong ứng dụng của bạn (web, mobile, desktop), xem:**
+
+- **[EMBEDDABLE-LINKS.md](EMBEDDABLE-LINKS.md)** - Bảng đầy đủ các URL HTTP có thể nhúng trực tiếp
+- **[image-links.json](image-links.json)** - Dữ liệu JSON cho các ứng dụng lập trình
+
+Các URL này có thể được sử dụng trong:
+- HTML `<img>` tags
+- React/Vue/Angular components
+- Flutter/React Native apps
+- iOS/Android native apps
+- CSS backgrounds
+- API calls
+
 ## 📊 Thống kê
 
 - **Tổng số ảnh:** 34
